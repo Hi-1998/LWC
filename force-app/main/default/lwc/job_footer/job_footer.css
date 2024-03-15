@@ -1,0 +1,42 @@
+.slds-card {
+    background-color: rgb(171, 169, 169);
+    padding: 20px;
+    height: 350px;
+}
+
+.slds-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col_text {
+    font-weight: 500;
+    font-size: larger;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.col_text:hover {
+    font-weight: 700;
+    color: white;
+}
+
+.col_heading {
+    font-size: large;
+    font-weight: 700;
+}
+
+.logo {
+    width: 185px;
+    height: 100px;
+    position: relative;
+    left: 50px;
+}
+
+.signature {
+    left: 51px;
+    position: relative;
+    top: 88px;
+    width: 300px;
+    transform: rotate(-24deg);
+}

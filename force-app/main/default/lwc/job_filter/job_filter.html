@@ -1,0 +1,39 @@
+<template>
+	<div class='slds-card'>
+		<div class='filter_header_title'>Job Board</div>
+		<div class='filter_section'>
+			<section class="search_box_section">
+				<strong class="search_title"> Job </strong>
+				<input type="text" class="search_box" name="description" onkeyup={handleInput}
+					placeholder="search by text" />
+			</section>
+			<section class="search_box_section">
+				<strong class="search_title"> Location </strong>
+				<input type="text" class="search_box" name="location" onkeyup={handleInput}
+					placeholder="search by location" />
+			</section>
+			<section class="search_box_section">
+				<input type="checkbox" class="full_time_box" name="full_time" onchange={handleInput} />
+				<strong>Full Time only</strong>
+			</section>
+			<section class="search_box_section">
+				<button class="slds-button slds-button_outline-brand search_button"
+					onclick={handleSearch}>Search</button>
+			</section>
+		</div>
+	</div>
+
+	<template lwc:if={listViewAppear}>
+		<c-job_tile_list job_list={filterd_jobs} oneventfromjobtile={handleEvent}></c-job_tile_list>
+	</template>
+
+	<template lwc:if={descriptionAppear}>
+		<c-job_description job_object={job_object} oneventfromdescription={handleEvent}></c-job_description>
+	</template>
+
+	<template lwc:if={recommendationAppear}>
+		<h1 class="recommendation_heading">Top Recommendation</h1>
+		<c-job_recommendation job_object={job_object}
+			oneventfromjobrecommendation={handleSliderEvent}></c-job_recommendation>
+	</template>
+</template>

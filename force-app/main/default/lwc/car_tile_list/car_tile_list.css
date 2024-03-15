@@ -1,0 +1,22 @@
+.slds-box,.images{
+	border-radius: 0.2cm;
+}
+.carName{
+	color:rgb(255, 111, 0)
+}
+
+.carPrice{
+	color: rgb(101, 99, 97);
+}
+.slds-box{
+	border-color: rgb(254, 193, 128);
+	padding: 0.3cm;
+	padding-bottom: 0.2cm;
+	
+}
+.card{
+	background-color: rgb(255, 234, 188);
+}
+.images{
+	    cursor: pointer;
+}

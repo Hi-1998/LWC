@@ -1,0 +1,101 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Questions" >
+        <div  class="slds-m-around_medium">
+            <form> 
+            <template for:each={myquestions} for:item="i">
+                <div key={i.id}>
+                    <strong> {i.id}:- {i.question} </strong>
+                    <div class="slds-grid slds-gutters slds-m-around_small">
+                        <div class="slds-col">
+                        <input type="radio" value="a" name={i.id} onchange={changehandler} style=" margin-right: 10px" > 
+                         {i.ans.a} </div>
+
+                        <div class="slds-col">
+                        <input type="radio" value="b" name={i.id} onchange={changehandler} style=" margin-right: 10px"> 
+                         {i.ans.b} </div>
+                        
+                        <div class="slds-col">
+                        <input type="radio" value="c" name={i.id} onchange={changehandler} style=" margin-right: 10px"> 
+                         {i.ans.c} </div>
+
+                        <div class="slds-col">
+                        <input type="radio" value="d" name={i.id} onchange={changehandler} style=" margin-right: 10px"> 
+                         {i.ans.d} </div>
+                    </div></br>
+                </div>  
+            </template>
+            <center>
+                <lightning-button variant="brand" type="submit" label="Submit" title="Submit Quiz" class="slds-m-around_medium" disabled={allnotselected} onclick={submithandler}></lightning-button>
+                <lightning-button variant="brand" type="reset" label="Reset" title="Reset Quiz" class="slds-m-around_medium" onclick={resethandler}></lightning-button>
+            </center>
+            </form>
+        </div>
+
+    </lightning-card>
+
+
+       
+  
+<!--------------------------------------------------------------------Multi-choice------------------------------------------------------------    -->
+    
+    <lightning-card title="Multi-choice">
+        <div class="slds-m-around_medium">
+            <form>
+            <template for:each={multichoicequestions} for:item="i">
+                <div key={i.id}>
+                    <strong>{i.id}:- {i.question}</strong>
+                    <div class="slds-grid slds-gutters slds-m-around_small slds-form-element__control">
+                        <div class="slds-checkbox slds-col">
+                            <input type="checkbox" name={i.id} id={i.ans.a} value="a" onchange={multichangehandler}/>
+                            <label class="slds-checkbox__label" for={i.ans.a}>
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label" style=" margin-left: 10px">{i.ans.a}</span>
+                            </label>
+                        </div>
+                        <div class="slds-checkbox slds-col">
+                            <input type="checkbox" name={i.id} id={i.ans.b} value="b" onchange={multichangehandler}/>
+                            <label class="slds-checkbox__label" for={i.ans.b}>
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label" style=" margin-left: 10px">{i.ans.b}</span>
+                            </label>
+                        </div>
+                        <div class="slds-checkbox slds-col">
+                            <input type="checkbox" name={i.id} id={i.ans.c} value="c" onchange={multichangehandler} />
+                            <label class="slds-checkbox__label" for={i.ans.c}>
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label" style=" margin-left: 10px">{i.ans.c}</span>
+                            </label>
+                        </div>
+                        <div class="slds-checkbox slds-col">
+                            <input type="checkbox" name={i.id}  id={i.ans.d} value="d" onchange={multichangehandler}/>
+                            <label class="slds-checkbox__label" for={i.ans.d}>
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label" style=" margin-left: 10px">{i.ans.d}</span>
+                            </label>
+                        </div>
+                    </div></br>
+                </div>
+            </template>
+            <center>
+                <lightning-button variant="brand" type="submit" label="Submit Section-2" title="Submit Section-2" class="slds-m-around_medium" disabled={allnotselectedmultichoice} onclick={submitsection2handler}></lightning-button>
+                <lightning-button variant="brand" type="reset" label="Reset Section-2" title="Reset Section-2" class="slds-m-around_medium" onclick={resetsection2handler}></lightning-button>
+            </center>
+            </form>
+        </div>
+    </lightning-card>
+
+    <lightning-card   title="Result" >
+        <template if:true={flag}>    
+            <center><div  class="slds-m-around_medium red" >Section 1:- {correctAnswers} out of {myquestions.length}</div></center>
+        </template>
+        <template if:true={flag1}>
+            <center><div  class="slds-m-around_medium red" >Section 2:- {correctmultichoice} out of {multichoicequestions.length}</div></center>
+        </template>
+        <template if:true={flag1}>
+            <center><div style={dynamicCSSper} class="slds-m-around_medium red" >Percentage:- {per}%</div></center>
+        </template>
+    </lightning-card>
+        
+
+
+</template>

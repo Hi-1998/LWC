@@ -1,0 +1,59 @@
+<template>
+	<lightning-card title="Account form" icon-name="standard:account">
+		<div class="slds-m-around_medium">
+			<lightning-record-form object-api-name={objectname} fields={fieldlist} onsuccess={successhandler}
+				columns='4'></lightning-record-form>
+		</div>
+	</lightning-card>
+
+	<lightning-card title="Account Detail" icon-name="standard:account">
+		<div class="slds-m-around_medium">
+			<lightning-record-form record-id='0012w00001GVc18AAD' object-api-name={objectname} fields={fieldlist}
+				columns='4'></lightning-record-form>
+		</div>
+	</lightning-card>
+
+	<lightning-card title="Account Detail" icon-name="standard:account">
+		<div class="slds-m-around_medium">
+			<lightning-record-form record-id='0012w00001GVc18AAD' object-api-name="Account" columns='4'>
+				<lightning-output-field field-name="Name"></lightning-output-field>
+			</lightning-record-form>
+		</div>
+	</lightning-card>
+
+	<!-- -----------------------------------------------------------------@wire Service------------------------------------------------------------------>
+	<lightning-card>
+		<div class='slds-m-around_medium'>
+			<template if:true={record.data}>
+				<p>
+					Account Name is:- {name}, Industry:-{industry}
+				</p>
+			</template>
+		</div>
+	</lightning-card>
+
+	<lightning-card>
+		<div class='slds-m-around_medium'>
+			<form class="form">
+				<lightning-input type="text" name="FirstName" label="First Name" onchange={changehandler}
+					class='slds-m-bottom_x-small'></lightning-input>
+				<lightning-input type="text" name="LastName" label="Last Name" onchange={changehandler}
+					class='slds-m-bottom_x-small'></lightning-input>
+				<lightning-input type="text" name="Title" label="Title" onchange={changehandler}
+					class='slds-m-bottom_x-small'></lightning-input>
+				<lightning-input type="text" name="Phone" label="Phone" onchange={changehandler}
+					class='slds-m-bottom_x-small'></lightning-input>
+				<lightning-input type="text" name="Email" label="Email" onchange={changehandler}
+					class='slds-m-bottom_x-small'></lightning-input>
+				<lightning-button variant="brand" label="Create Contact" onclick={createContact}
+					class='slds-m-right_x-large'></lightning-button>
+				<lightning-button variant="brand" label="Update Contact" onclick={updateRecordhandler}
+					class='slds-m-right_x-large'></lightning-button>
+				<lightning-button variant="brand" label="Delete Contact" onclick={deleteRecordhandler}>
+				</lightning-button>
+
+			</form>
+		</div>
+	</lightning-card>
+
+</template>

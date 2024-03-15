@@ -1,0 +1,104 @@
+.slds-card {
+    background-color: #dbdbdb;
+    top: 8px;
+    padding-top: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
+
+.layout{
+    padding-left: 13px;
+}
+
+.slds-box {
+    background-color: white;
+    width: 280px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 6px gray;
+}
+
+.slds-box:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.job_title {
+    font-family: unset;
+    font-weight: 700;
+    height: 40px;
+    color: #0F9D58;
+    line-height: normal;
+    font-size: 14px;
+}
+
+.job_location {
+    font-weight: 600;
+    position: relative;
+    top: 20px;
+}
+
+.job_created {
+    color: gray;
+    font-size: smaller;
+    margin-top: 5px;
+}
+
+.job_type {
+    background-color: #970505b5;
+    color: white;
+    width: 70px;
+    border-radius: 4px;
+    text-align: center;
+    transform: rotate(-32deg);
+    position: relative;
+    left: -30px;
+    top: -12px;
+}
+
+.job_company {
+    text-align: right;
+    background: #6da5ff;
+    position: relative;
+    bottom: 35px;
+    width: fit-content;
+    float: right;
+    left: 16px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: -2px 2px 5px 0px gray;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 3px;
+}
+
+.company_link {
+    color: black;
+}
+
+.title_and_view {
+    position: absolute;
+    width: 250px;
+}
+
+.job_view_created {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 20px;
+    position: relative;
+}
+
+.view_button {
+    height: 22px;
+    width: 42px;
+    --slds-c-button-color-border: #F4B400;
+    font-size: 14px;
+    color: black;
+    background-color: #ffbc0061;
+    font-weight: 600;
+    scroll-behavior: smooth;
+    cursor: pointer;
+}

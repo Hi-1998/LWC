@@ -1,0 +1,52 @@
+<template>
+    <lightning-card  title="Navigate to Home page">
+        <div class="slds-m-around_medium">
+            <strong>Click the button to naviate the <i style="color:green"> Home Page  &nbsp;  &nbsp;</i></strong>
+            <lightning-button variant="brand" label="go to Home Page"  onclick={handleHomePage}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Navigate to Chatter">
+        <div class="slds-m-around_medium">
+            <strong>Click the button to naviate the <i style="color:green">  Chatter  &nbsp;  &nbsp; </i> </strong>
+            <lightning-button variant="brand" label="go to Chatter"  onclick={handleChatter}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Navigate to Record Page in View and Edit mode">
+        <div class="slds-m-around_medium">
+            <strong>Click the button to naviate the record page in<i style="color:green"> View Mode &nbsp; &nbsp;</i> </strong>
+            <lightning-button variant="brand" label="View Mode"  onclick={handleViewMode}></lightning-button></br></br>
+            <strong>Click the button to naviate the record page in<i style="color:green">Edit Mode &nbsp;  &nbsp;</i> </strong>
+            <lightning-button variant="brand" label="Edit Mode"  onclick={handleEditMode}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Navigate to new Record">
+        <div class="slds-m-around_medium">
+            <strong>Click the button to naviate the <i style="color:green">  new Record   &nbsp;  &nbsp;</i> </strong>
+            <lightning-button variant="brand" label="go to Account"  onclick={handleObject}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Navigate to List View">
+        <div class="slds-m-around_medium">
+            <strong>Click the button to naviate the <i style="color:green">  List view  &nbsp;  &nbsp;</i> </strong>
+            <lightning-button variant="brand" label="go to List View"  onclick={handlelistView}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Navigate to Tab">
+        <div class="slds-m-around_medium">
+            <strong>Click the button to naviate the <i style="color:green">  Tab &nbsp;  &nbsp;</i> </strong>
+            <lightning-button variant="brand" label="go to Tab"  onclick={handleTab}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Navigate External Site">
+        <div class="slds-m-around_medium">
+            <strong>Click the button to naviate the <i style="color:green">  External Site &nbsp;  &nbsp;</i> </strong>
+            <lightning-button variant="brand" label="go to Site"  onclick={handleSite}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

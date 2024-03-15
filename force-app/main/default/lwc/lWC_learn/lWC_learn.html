@@ -1,0 +1,53 @@
+<template>
+  <lightning-card title="HelloWorld" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+      <p>Hello, {greeting}</p>
+      <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+    </div>
+  </lightning-card>
+
+  <lightning-card   title="The button" icon-name="custom:custom15">
+    <div class="slds-m-around_medium">
+      <p class="hello">  </p>
+      <template if:true={flag}> I am visible.. </template>
+      <template if:false={flag}> I am hiding.. </template>
+      <button id="button" onclick={handleclick} class="slds-button slds-button_brand" style="position: absolute; margin-left:0.4cm;  border-radius:5cm;">Hit me!</button>      
+    </div>
+  </lightning-card>
+
+  <lightning-card   title="quiz" icon-name="custom:custom16">
+    <div class="slds-m-around_medium">
+      <strong> Do you want Quiz lightning component here ?</strong>
+      <lightning-button variant="brand" class="button" onclick={showchild} label={changeButtonName}  style=" margin-left:0.4cm;  border-radius:5cm;"></lightning-button> 
+      <template if:true={flag1}> <c-q1></c-q1></template>
+    </div>
+  </lightning-card>
+
+  <lightning-card   title="Parent to Child" icon-name="custom:custom17">
+    <div class="slds-m-around_medium">
+      <lightning-input type="number" onchange={changeprogress}  label="Number" placeholder="type number here..."></lightning-input></br>
+      <c-p2-c message="hello brother how are you" message-list={ml} progress-value={progressnumber} details={userDetails}><p style="color:blue">This tag is example of passing markup from parent to child</p></c-p2-c>
+    </div>    
+  </lightning-card>
+
+  <lightning-card   title="Child to Parent" icon-name="custom:custom20">
+    <div class="slds-m-around_medium">
+      <c-p2-c ongetsearchvalue={handleChildtoParent}></c-p2-c>
+      <p>showing from parent  {searchValue}</p>  
+    </div>    
+  </lightning-card>
+
+  <lightning-card  icon-name="custom:custom18">
+    <div class="slds-m-around_medium">
+      <p> {userid} </p>
+     </div>
+  </lightning-card>
+
+  <lightning-card  icon-name="custom:custom19">
+    <div class="slds-m-around_medium">
+      <p> click the below button to show toast notification </p>
+      <lightning-button variant="brand" label="show toast"  onclick={toasthandleClick}></lightning-button>
+     </div>
+  </lightning-card>
+
+</template>

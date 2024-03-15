@@ -1,0 +1,159 @@
+:host {
+    --bgcolorcard: rgb(206, 206, 206);
+}
+
+.slds-card {
+    border: none;
+    background-color: var(--bgcolorcard);
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin-top: 10px;
+}
+
+.header,
+.main_body {
+    background-color: white;
+    position: relative;
+    width: 70%;
+    left: 15%;
+    border-radius: 5px;
+}
+
+.header {
+    margin-bottom: 20px;
+    top: 10px;
+    left: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 84px;
+}
+
+.header_and_back {
+    position: relative;
+    display: flex;
+}
+
+.back {
+    margin-top: 10px;
+    margin-left: 75px;
+    border: solid;
+    border-radius: 30px;
+    border-width: 2px;
+    border-color: #639ae4;
+    font-weight: 700;
+}
+
+.d_body {
+    bottom: 10px;
+}
+
+.logo {
+    width: 100%;
+    height: 70px;
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.company_title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #b20303;
+    font-family: Arial;
+    text-shadow: -1px 2px 2px darkgray;
+}
+
+.company_link {
+    border-width: medium;
+    font-size: 14px;
+    color: var(--purplrledark);
+    font-weight: 700;
+    background: #6da6ffc4;
+    border-color: #639ae4;
+    border-radius: 30px;
+}
+
+.apply_button {
+    background-color: #ffbc0061;
+    --slds-c-button-color-border: #F4B400;
+    font-size: 14px;
+    color: var(--purplrledark);
+    font-weight: 700;
+    border-width: medium;
+    border-radius: 30px;
+}
+
+.job_created {
+    color: gray;
+    font-size: 13px;
+}
+
+.appply_and_created {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.d_body {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.job_title {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: fangsong;
+    color: var(--purplrledark);
+}
+
+.job_type {
+    background-color: #a70909c9;
+    color: white;
+    width: 70px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    top: 3px;
+}
+
+.job_description {
+    margin-top: 20px;
+}
+
+.job_description h1,
+.job_description h2,
+.job_description p,
+.job_description ul {
+    padding-bottom: 10px;
+}
+
+.job_description h1 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.job_description ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.job_description h2 {
+    font-size: 1.5em;
+}
+
+.job_description h3 {
+    font-size: 1.12em;
+    font-weight: bold;
+}
+
+.slds-modal {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slds-modal__close {
+    color: #b20303;
+}

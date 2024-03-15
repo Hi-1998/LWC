@@ -1,0 +1,26 @@
+<template>
+    <div class="container">
+        <lightning-card  title="Playing Area">
+            <div class="slds-m-around_medium">
+                <section class="score_panel">
+                    <span class="moves"><strong> {moves} </strong></span>Move(s)
+                    <!-- <div class="timer"><strong> {totalTime} </strong></div> -->
+                    <div class="restart" onclick={shuffle}><i class="fa fa-repeat" ></i></div>
+                </section >
+                <section class="game_panel">
+                    <ul class="deck card-deck grid-container">
+                        <template for:each={cards} for:item="i">
+                            <li class={i.listclass} type={i.type} key={i.id} onclick={showCard}> 
+                                <i class={i.icon}></i>
+                            </li>
+
+                        </template>
+                    </ul>
+                </section>
+                <section style="margin-top:1cm">
+                    <center><strong>You have completed this game in <i style="color:green">{moves}</i> moves.</strong></center>
+                </section>
+            </div>
+        </lightning-card>
+    </div>
+</template>

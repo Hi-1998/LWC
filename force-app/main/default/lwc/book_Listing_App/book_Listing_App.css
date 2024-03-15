@@ -1,0 +1,9 @@
+.dummy{
+	color : black;
+}
+
+.slds-box{
+	border-radius: 0.5cm;
+	border-color: black;
+	height: 279px;
+}

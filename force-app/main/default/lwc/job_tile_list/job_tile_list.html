@@ -1,0 +1,43 @@
+<template>
+	<div class="slds-card">
+		<template lwc:if={job_list}>
+			<lightning-layout multiple-rows="true" class="layout">
+				<template for:each={job_list} for:item="jl" for:index="i">
+					<lightning-layout-item key={jl.id} size="3" padding="around-small">
+						<div class="slds-box">
+							<div>
+								<div class="job_type">
+									{jl.type}
+								</div>
+								<div>
+									<div class="job_company">
+										<a href={jl.company_url} target="_blank" class="company_link">
+											{jl.company}
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="title_and_view">
+								<p class="job_title">
+									{jl.title}
+								</p>
+								<div class="job_location">
+									Location:- {jl.location}
+								</div>
+								<div class="job_view_created">
+									<div class="job_created">
+										Posted on:- {jl.created_at}
+									</div>
+									<div>
+										<button class="slds-button slds-button_outline-brand view_button" value={i}
+											onclick={handleViewCardClick}> view </button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</lightning-layout-item>
+				</template>
+			</lightning-layout>
+		</template>
+	</div>
+</template>

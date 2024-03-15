@@ -1,0 +1,19 @@
+<template>
+    <lightning-card  title="Search Result" icon-name="standard:account" class="card">
+        <div class='slds-m-around_medium'>
+            <template if:true={Car_list}>
+                <lightning-layout multiple-rows>
+                    <template for:each={Car_list} for:item="i">
+                        <lightning-layout-item key={i.Id}  size="3" padding="around-small" >
+                            <div class="slds-box" key={i.Id} value={i.Id} onclick={clickHandler} >
+                                <img src={i.Picture_URL__c} height="20px" class="images"/>
+                                <center><strong class="carName">{i.Name} </strong></center>
+                                <center>Price-<lightning-formatted-number format-style="currency" currency-code="INR" value={i.MSRP__c} maximum-fraction-digits='0'  class="carPrice"> </lightning-formatted-number></center>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </template>
+        </div>
+    </lightning-card>
+</template>

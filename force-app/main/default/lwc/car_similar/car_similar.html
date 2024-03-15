@@ -1,0 +1,25 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Similar Cars" >
+        <div class='slds-m-around_medium'>
+            <template if:false={similarCarList}>
+                <center><lightning-button variant="success" label="fetch similar Cars" onclick={fetchSimilarCars1}></lightning-button></center>
+            </template>
+
+            <template if:true={similarCarList}>
+                <template for:each={similarCarList} for:item="i">
+                    <div class='slds-box' key={i.Id} >
+                        <img src={i.Picture_URL__c} class='thumbnails'/>
+                        <div class="b">
+                            Name-<strong>{i.Name}</strong>
+                            <p>Price-<lightning-formatted-number format-style="currency" currency-code="INR" value={i.MSRP__c} maximum-fraction-digits='0'  class="carPrice"> </lightning-formatted-number></p>
+                        </div>
+                        <div class="button">
+                            <lightning-button variant="brand-outline" label="Similar" value={i.Id} onclick={fetchSimilarCars2}></lightning-button>
+                        </div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

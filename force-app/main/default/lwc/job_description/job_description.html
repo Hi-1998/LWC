@@ -1,0 +1,61 @@
+<template>
+
+    <div class="slds-card">
+        <div class="header_and_back">
+            <div>
+                <button class="back slds-button slds-button_neutral" onclick={handleBack}>Back</button>
+            </div>
+            <div class="header">
+                <div>
+                    <img class="logo" src={pickLOGO} alt="Logo" />
+                </div>
+                <div class="company_title">
+                    {job_object.company}
+                </div>
+                <div>
+                    <button class="slds-button slds-button_outline-brand company_link" onclick={handleClickCompany}>
+                        Company Site</button>
+                </div>
+            </div>
+        </div>
+        <div class="main_body">
+            <div class="d_body">
+                <div class="appply_and_created">
+                    <div class="job_created">
+                        Posted on:- {job_object.created_at}
+                    </div>
+                    <div>
+                        <button class="slds-button slds-button_outline-brand apply_button" onclick={handleApplyJob}>
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="job_title">
+                    {job_object.title}
+                </div>
+                <div class="job_type">
+                    {job_object.type}
+                </div>
+                <div lwc:dom="manual" class="job_description">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template lwc:if={form}>
+        <section class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h1 class="slds-modal__title slds-hyphenate">JOB Application form</h1>
+                    <button class="slds-button slds-modal__close" onclick={closeModel}> close </button>
+                </div>
+                <div class="slds-modal__content slds-p-around_small">
+                    <lightning-record-form object-api-name="Job_Application__c" fields={fieldList}
+                        onsuccess={successHandler} columns="2"></lightning-record-form>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</template>

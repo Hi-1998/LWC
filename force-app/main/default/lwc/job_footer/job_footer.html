@@ -1,0 +1,39 @@
+<template>
+    <div class="slds-card">
+        <div class="slds-grid">
+
+            <div class="slds-col">
+                <img class="logo" src={Logo} alt="logo">
+                <img class="signature" src={Signature} alt="logo">
+            </div>
+
+            <ul class="slds-col">
+                <div class="col_heading">
+                    General
+                </div><br>
+                <template for:each={column1} for:item="c">
+                    <li class="col_text" key={c}>{c}</li>
+                </template>
+            </ul>
+
+            <ul class="slds-col">
+                <div class="col_heading">
+                    Browse
+                </div><br>
+                <template for:each={column2} for:item="c">
+                    <li class="col_text" key={c}>{c}</li>
+                </template>
+            </ul>
+
+            <ul class="slds-col">
+                <div class="col_heading">
+                    Directories
+                </div><br>
+                <template for:each={column3} for:item="c">
+                    <li class="col_text" key={c}>{c}</li>
+                </template>
+            </ul>
+
+        </div>
+    </div>
+</template>

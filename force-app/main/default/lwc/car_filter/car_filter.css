@@ -1,0 +1,35 @@
+.searchKeyinput{
+	font-weight: bold ;
+    border-radius: 1cm;
+    border-color: #e67117;
+    padding: 4px;
+    padding-right: 40px;
+}
+
+.category_section, .search_key_section {
+	background-color: #ffbd6c;
+    padding: 0.4cm;
+    border-radius: 0.3cm;
+    margin-top: 0.3cm;
+    padding-top: 0.1cm;
+    padding-bottom: 0.15cm;
+}
+.section_heading{
+    font-size: 13px;
+    color: black;
+    font-weight: 700;
+}
+
+.makeType_section, .slider_section{
+	background-color: #cecece;
+    border-radius: 0.3cm;
+    margin-top: 0.3cm;
+    padding: 0.4cm;
+    padding-top: 0.1cm;
+    padding-bottom: 0.15cm;
+}
+
+.left{
+   display: inline-grid; 
+   padding-right: 2.5cm;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is a Lightning Message Service Channel for job app.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>To send complete job JSON object</description>
+        <fieldName>job_object</fieldName>
+    </lightningMessageFields>
+    <masterLabel>Job_LO</masterLabel>
+</LightningMessageChannel>

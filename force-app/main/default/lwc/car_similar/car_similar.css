@@ -1,0 +1,7 @@
+.thumbnails{
+	height: 70px;
+}
+.slds-box{
+	display: flex;
+	justify-content: space-between;
+}

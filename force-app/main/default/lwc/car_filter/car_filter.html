@@ -1,0 +1,45 @@
+<template>
+    <lightning-card  title="Filters" icon-name="standard:calibration">
+        <div class='slds-m-horizontal_medium '>
+            <section class="search_key_section">
+                <p class="section_heading">Search key</p>
+                <input class="searchKeyinput" value={searchKey} type="search"  placeholder="type here..." onchange={handleSearchKeyChange}></input>
+            </section>
+
+            <section class="slider_section">
+                <p class="section_heading">Price range</p>
+                <lightning-slider  value={maxValue} type="horizontal" min='0' max='999999' step='100' onchange={handleMaxPriceChange}></lightning-slider>
+            </section>
+            
+            <section class="category_section">
+                <section class='left'>
+                    <p class="section_heading">Category</p>
+                    <template if:true={categories.data}>
+                        <template for:each={categories.data.values} for:item="i">
+                            <div key={i.label}>
+                                <lightning-input type="checkbox" checked name="categories" value={i.label} label={i.label} onchange={handleCheckbox}></lightning-input>
+                            </div>
+                        </template>
+                    </template>
+                    <template if:true={categories.error}>
+                        <div> Error Loading Categories</div>
+                    </template>
+                </section>
+            
+                <section  class='left'>
+                    <p class="section_heading">Make</p>
+                    <template if:true={makeType.data}>
+                        <template for:each={makeType.data.values} for:item="i">
+                            <div key={i.label}>
+                                <lightning-input type="checkbox" checked name="makeType" value={i.label} label={i.label} onchange={handleCheckbox}></lightning-input>
+                            </div>
+                        </template>
+                        <template if:true={makeType.error}>
+                            <div> Error Loading Categories</div>
+                        </template>
+                    </template>
+                </section>
+            </section>
+        </div>
+    </lightning-card>
+</template>

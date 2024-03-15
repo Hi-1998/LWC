@@ -1,0 +1,23 @@
+<template>
+    <p>{message}</p>
+    
+    <template for:each={messageList} for:item="i">
+        <strong key={i.id}>{i.id}, </strong>
+    </template>
+
+    <lightning-progress-bar value={progressValue} size="large"></lightning-progress-bar></br>
+    <template if:true={details}>
+    <p> Name:- {details.name}</p>
+    <p> Age:- {details.age}</p>
+    <p> Location:- {details.location}</p>
+    </template> 
+
+
+
+    
+    <lightning-input type="text" onchange={handleChange} label="passing from child to parent" ></lightning-input>
+
+
+<!-- 
+    <div> <slot></slot></div> -->
+</template>
